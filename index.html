@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programador de Mantenimiento - INTEINSA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Programador de Mantenimiento Software & Hardware - INTEINSA</h1>
+    </header>
+
+    <main>
+        <section id="scheduler">
+            <h2>Asignar Mantenimiento</h2>
+            <form id="maintenanceForm">
+                <label for="employeeName">Nombre del Empleado:</label>
+                <input type="text" id="employeeName" name="employeeName" required>
+
+                <label for="department">Área:</label>
+                <input type="text" id="department" name="department" required>
+
+                <label for="computer">Seleccionar Computadora:</label>
+                <select id="computer" name="computer"></select>
+
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Hora:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Programar Mantenimiento</button>
+                <button type="button" id="clearMaintenanceForm">Limpiar</button>
+            </form>
+        </section>
+
+        <section id="modifySchedule">
+            <h2>Modificar Programación</h2>
+            <label for="scheduleId">ID de Programación:</label>
+            <input type="text" id="scheduleId">
+            <button id="fetchSchedule">Buscar</button>
+            <form id="updateForm" style="display:none;">
+                <label for="updateEmployeeName">Nombre del Empleado:</label>
+                <input type="text" id="updateEmployeeName" name="employeeName">
+
+                <label for="updateDepartment">Área:</label>
+                <input type="text" id="updateDepartment" name="department">
+
+                <label for="updateDate">Nueva Fecha:</label>
+                <input type="date" id="updateDate" name="date">
+
+                <label for="updateTime">Nueva Hora:</label>
+                <input type="time" id="updateTime" name="time">
+
+                <button type="submit">Actualizar</button>
+                <button type="button" id="clearUpdateForm">Limpiar</button>
+            </form>
+        </section>
+
+        <section id="userInfo">
+            <h2>Consulta de Información</h2>
+            <input type="text" id="userId" placeholder="ID de Usuario">
+            <button id="checkInfo">Consultar</button>
+            <button type="button" id="clearUserInfo">Limpiar</button>
+            <div id="infoDisplay"></div>
+        </section>
+
+        <section id="reportIssue">
+            <h2>Reportar Novedad</h2>
+            <form id="reportForm">
+                <label for="reportUserId">ID de Usuario:</label>
+                <input type="text" id="reportUserId" name="reportUserId">
+
+                <label for="issueDescription">Descripción del Inconveniente:</label>
+                <textarea id="issueDescription" name="issueDescription"></textarea>
+
+                <button type="submit">Enviar Reporte</button>
+                <button type="button" id="clearReportForm">Limpiar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
